@@ -1,4 +1,4 @@
-Our calculator has the function to be a classic calculator as a vertical orientation and a scientific calculator 
+This calculator has the function to be a classic calculator as a vertical orientation and a scientific calculator 
 when it is at a horizontal orientation.
 
 Our Main Activity, has  our fields that correlate to buttons on XML. We also have a method that evaluates our XML button inputs. 
