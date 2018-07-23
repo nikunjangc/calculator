@@ -43,5 +43,8 @@
     <string name="decimal">.</string>
     <string name="equals">=</string>
     <string name="add">+</string>
+    <string name="rad_degree_switch">Rad</string>
+    <string name="degree_rad_switch">Deg</string>
+    <string name="factorial">x!</string>
 
 </resources>

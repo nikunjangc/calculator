@@ -28,46 +28,24 @@
         android:gravity="center"
         android:paddingBottom="5dp">
 
+
         <Switch
             android:id="@+id/simpleSwitch"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_marginEnd="1dp"
-            android:background="@drawable/mybutton"
-            android:checked="true"
-            android:disabledAlpha="1.2"
-            android:textAllCaps="false"
             android:textColor="@color/calculator_color"
-            android:textOff="@string/rad_degree_togle"
-            android:textOn="Deg"
-            android:textSize="24sp" />
-
-        <ToggleButton
-            android:id="@+id/rad_degree_togle"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:showText="true"
-            android:textOn="Deg"
-            android:textOff="@string/rad_degree_togle"
-            android:textSize="24sp"
-            android:textAllCaps="false"
-            android:layout_marginEnd="1dp"
-            android:disabledAlpha="1.2"
-            android:textColor="@color/calculator_color"
-            android:background="@drawable/mybutton"
-            />
+            android:textOff="@string/rad_degree_switch"
+            android:textOn="@string/degree_rad_switch"
+            android:background="@drawable/mybutton" />
 
 
 
         <Button
             android:id="@+id/factorial"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_weight="1"
-            android:text="x!"
+            android:text="@string/factorial"
             android:textSize="24sp"
-            android:padding="8dp"
             android:onClick="calculateEquation"
             android:tag="!"
             android:layout_marginEnd="1dp"
@@ -76,7 +54,7 @@
 
         <Button
             android:id="@+id/open_parens"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/open_parens"
@@ -90,7 +68,7 @@
 
         <Button
             android:id="@+id/closed_parens"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/closed_parens"
@@ -105,7 +83,7 @@
 
         <Button
             android:id="@+id/percent"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/percent"
@@ -119,7 +97,7 @@
             />
         <Button
             android:id="@+id/clear"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_weight="1"
             android:text="@string/clear"

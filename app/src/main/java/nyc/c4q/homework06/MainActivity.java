@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -15,9 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public int inv_counter = 1;
-
     private TextView text_equation;
-    private Switch simpleSwitch;
+    Switch simpleSwitch;
     private Button rad_degree_togle;
     private Button factorial;
     private Button open_parens;
@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Switch simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
+         simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
         text_equation = (TextView) findViewById(R.id.text_equation);
-        rad_degree_togle = (ToggleButton) findViewById(R.id.rad_degree_togle);
+       // rad_degree_togle = (ToggleButton) findViewById(R.id.rad_degree_togle);
         factorial = (Button) findViewById(R.id.factorial);
         open_parens = (Button) findViewById(R.id.open_parens);
         closed_parens = (Button) findViewById(R.id.closed_parens);
@@ -112,8 +112,37 @@ public class MainActivity extends AppCompatActivity {
         equals = (Button) findViewById(R.id.equals);
         add = (Button) findViewById(R.id.add);
         //TODO: saved instance state for switching screen orientation layouts.
-        Boolean switchState = simpleSwitch.isChecked();
+        simpleSwitch.setChecked(true);
+       simpleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+
+                if(isChecked){
+                    simpleSwitch.getTextOn();
+                    simpleSwitch.setText("Deg");
+
+                }else{
+                    simpleSwitch.getTextOff();
+                    simpleSwitch.setText("Rad");
+
+                }
+
+            }
+        });
+
+        //check the current state before we display the screen
+        if(simpleSwitch.isChecked()){
+            simpleSwitch.setText("Deg");
+        }
+        else {
+            simpleSwitch.setText("Rad");
+        }
     }
+
+
+
 
     public void calculateEquation(View v) {
 
@@ -122,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         //TODO: design the UI styles
         // TODO: radians vs degrees toggle button.
 
-
+       // Boolean switchState = simpleSwitch.isChecked();
         CalculatorEvaluation calc = new CalculatorEvaluation();
         String thisEquation = text_equation.getText().toString();
         String expression;
