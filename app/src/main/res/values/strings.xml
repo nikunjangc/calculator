@@ -9,7 +9,7 @@
     <string name="clear">CE</string>
     <string name="inverse">inv</string>
     <string name="sin">sin</string>
-    <string name="sin_inverse">asin</string>
+    <string name="sin_inverse">sin−1</string>
     <string name="ln">ln</string>
     <string name="ln_inverse">e^x</string>
     <string name="seven">7</string>
@@ -38,7 +38,7 @@
     <string name="random_number">Rnd</string>
     <string name="exponent">Exp</string>
     <string name="x_square_y">x^y</string>
-    <string name="x_root_y">√</string>
+    <string name="x_root_y">x√y</string>
     <string name="Zero">0</string>
     <string name="decimal">.</string>
     <string name="equals">=</string>

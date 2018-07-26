@@ -1,4 +1,4 @@
-#Sun Jul 22 13:51:24 EDT 2018
-base.0=/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/transforms/dexMerger/debug/21
+#Thu Jul 26 16:37:07 EDT 2018
+base.0=/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/transforms/dexMerger/debug/40
 renamed.0=classes.dex
-file.0=/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/transforms/dexMerger/debug/21/classes.dex
+file.0=/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/transforms/dexMerger/debug/40/classes.dex

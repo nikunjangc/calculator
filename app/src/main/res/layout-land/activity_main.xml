@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="5dp"
+
     app:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
     tools:context="nyc.c4q.homework06.MainActivity">
     <TextView
@@ -33,10 +35,17 @@
             android:id="@+id/simpleSwitch"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
+
             android:textColor="@color/calculator_color"
             android:textOff="@string/rad_degree_switch"
             android:textOn="@string/degree_rad_switch"
-            android:background="@drawable/mybutton" />
+            android:showText="true"
+            android:background="@drawable/mybutton"
+
+
+            />
+
+
 
 
 
@@ -126,7 +135,7 @@
             android:text="@string/inverse"
             android:textSize="24sp"
             android:onClick="calculateEquation"
-            android:tag="inv"
+            android:tag="Inv"
             android:layout_marginEnd="1dp"
 
             android:textColor="@color/calculator_color"
@@ -156,7 +165,7 @@
             android:text="@string/sin_inverse"
             android:textSize="24sp"
             android:onClick="calculateEquation"
-            android:tag="asin"
+            android:tag="asin("
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
             android:textColor="@color/calculator_color"
@@ -173,7 +182,7 @@
             android:textSize="24sp"
             android:visibility="visible"
             android:onClick="calculateEquation"
-            android:tag="ln"
+            android:tag="ln("
             android:padding="8dp"
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
@@ -189,7 +198,7 @@
             android:textSize="24sp"
             android:visibility="gone"
             android:onClick="calculateEquation"
-            android:tag="e^x"
+            android:tag="e^"
             android:padding="8dp"
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
@@ -280,7 +289,7 @@
             android:layout_marginEnd="1dp"
             android:textColor="@color/calculator_color"
             android:background="@drawable/mybutton"
-            android:tag="*pi"
+            android:tag="pi"
             />
         <Button
             android:id="@+id/cos"
@@ -307,7 +316,7 @@
             android:visibility="gone"
             android:textSize="24sp"
             android:onClick="calculateEquation"
-            android:tag="acos"
+            android:tag="acos("
             android:padding="8dp"
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
@@ -340,7 +349,7 @@
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
             android:onClick="calculateEquation"
-            android:tag="10^x"
+            android:tag="10^"
             android:textColor="@color/calculator_color"
             android:background="@drawable/mybutton"
             />
@@ -384,7 +393,6 @@
             android:onClick="calculateEquation"
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
-
             android:textColor="@color/calculator_color"
             android:background="@drawable/button_number"
             android:tag="6"
@@ -449,7 +457,7 @@
             android:textSize="24sp"
             android:visibility="gone"
             android:onClick="calculateEquation"
-            android:tag="atan"
+            android:tag="atan("
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
             android:textColor="@color/calculator_color"
@@ -560,7 +568,7 @@
             android:layout_height="80dp"
             android:layout_weight="1"
             android:onClick="calculateEquation"
-            android:tag="ans"
+            android:tag=""
             android:text="@string/answer"
             android:visibility="visible"
             android:textSize="24sp"
@@ -608,7 +616,7 @@
             android:textSize="24sp"
             android:visibility="visible"
             android:onClick="calculateEquation"
-            android:tag="√"
+            android:tag=""
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
             android:textColor="@color/calculator_color"
@@ -623,7 +631,7 @@
             android:textSize="24sp"
             android:visibility="gone"
             android:onClick="calculateEquation"
-            android:tag="y√x"
+            android:tag=""
             android:padding="8dp"
             android:textAllCaps="false"
             android:layout_marginEnd="1dp"
