@@ -10,17 +10,15 @@ import com.fathzer.soft.javaluator.Parameters;
 
 
 /**
- * Created by amirahoxendine on 10/24/17.
+ * Created by nikunjan on 7/10/18.
  */
 
-public class CalculatorEvaluation extends Factorial{
+public class CalculatorEvaluation {
     private String equation;
     ExtendedDoubleEvaluator evaluator = new ExtendedDoubleEvaluator();
     Double result;
     public void evaluateEquation(String s, TextView textView){
 
-        //TODO: currently % is for modulo, not percentage, need to catch %, run percent function, then replace.
-        //TODO: need to check functions format for some functions
 
 
        try {

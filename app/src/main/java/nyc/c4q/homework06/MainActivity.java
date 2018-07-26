@@ -2,6 +2,7 @@ package nyc.c4q.homework06;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -10,11 +11,12 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 import java.lang.Math;
+import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    private static final String TAG = "MyActivity";
     public int inv_counter = 1;
     private TextView text_equation;
     Switch simpleSwitch;
@@ -60,16 +62,17 @@ public class MainActivity extends AppCompatActivity {
     private Button decimal;
     private Button equals;
     private Button add;
-    boolean evaluated= false;
+    boolean evaluated = false;
+    String saveAnswer = null;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
+        simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
         text_equation = (TextView) findViewById(R.id.text_equation);
-       // rad_degree_togle = (ToggleButton) findViewById(R.id.rad_degree_togle);
+        // rad_degree_togle = (ToggleButton) findViewById(R.id.rad_degree_togle);
         factorial = (Button) findViewById(R.id.factorial);
         open_parens = (Button) findViewById(R.id.open_parens);
         closed_parens = (Button) findViewById(R.id.closed_parens);
@@ -112,36 +115,10 @@ public class MainActivity extends AppCompatActivity {
         equals = (Button) findViewById(R.id.equals);
         add = (Button) findViewById(R.id.add);
         //TODO: saved instance state for switching screen orientation layouts.
-        simpleSwitch.setChecked(true);
-       simpleSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        clear.setOnClickListener(this);
+        answer.setOnClickListener(this);
 
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView,
-                                         boolean isChecked) {
-
-                if(isChecked){
-                    simpleSwitch.getTextOn();
-                    simpleSwitch.setText("Deg");
-
-                }else{
-                    simpleSwitch.getTextOff();
-                    simpleSwitch.setText("Rad");
-
-                }
-
-            }
-        });
-
-        //check the current state before we display the screen
-        if(simpleSwitch.isChecked()){
-            simpleSwitch.setText("Deg");
-        }
-        else {
-            simpleSwitch.setText("Rad");
-        }
     }
-
-
 
 
     public void calculateEquation(View v) {
@@ -151,10 +128,10 @@ public class MainActivity extends AppCompatActivity {
         //TODO: design the UI styles
         // TODO: radians vs degrees toggle button.
 
-       // Boolean switchState = simpleSwitch.isChecked();
-        CalculatorEvaluation calc = new CalculatorEvaluation();
+        CalculatorEvaluation calculation = new CalculatorEvaluation();
         String thisEquation = text_equation.getText().toString();
         String expression;
+
         if (v.getTag().toString().equals("inv")) {
             inv_counter = inv_counter + 1;
             if (inv_counter % 2 == 0) {
@@ -195,37 +172,61 @@ public class MainActivity extends AppCompatActivity {
                 x_square_y.setVisibility(View.VISIBLE);
 
             }
-        }
-        if (v.getTag().toString().equals("=")) {
-            calc.setEquation(text_equation.getText().toString());
-            expression = calc.getEquation();
-           calc.evaluateEquation(expression, text_equation);
-            evaluated = true;
-        } else if (evaluated){
-            text_equation.setText(v.getTag().toString());
-            evaluated= false;
-        } else if (v.getTag().toString().equals("delete")) {
-            text_equation.setText(thisEquation.substring(thisEquation.length()));
 
-        } else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
+        }
+
+
+        if (v.getTag().toString().equals("=")) {
+            if (v.getTag().toString().equals("ans")) {
+
+
+            }
+
+            String newString = text_equation.getText().toString();
+
+
+            FactorialAndPercentage cal = new FactorialAndPercentage();
+            newString = cal.simplify(newString);
+            Log.d("ok", newString);
+            newString = cal.simplify(newString);
+            Log.d("final", newString);
+
+            calculation.setEquation(newString.toString());
+            expression = calculation.getEquation();
+
+            calculation.evaluateEquation(expression, text_equation);
+            saveAnswer = text_equation.toString();
+
+            evaluated = true;
+        } else if (evaluated) {
+           // text_equation.setText(v.getTag().toString());
+
+            evaluated = false;
+        }
+//        } else if (v.getTag().toString().equals("delete")) {
+//            text_equation.setText(thisEquation.substring(thisEquation.length()));
+//
+//        }
+        else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
             thisEquation = thisEquation.concat(v.getTag().toString());
             text_equation.setText(thisEquation);
         }
 
+    }
 
-//        if (v.getTag().toString().equals("=")) {
-//            calc.setEquation(equation.getText().toString());
-//            expression = calc.getEquation();
-//            calc.evaluateEquation(expression, equation);
-//        } else if (v.getTag().toString().equals("delete")) {
-//            if (thisEquation.length() != 0) {
-//                equation.setText(thisEquation.substring(thisEquation.length()));
-//            }
-//            else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
-//                thisEquation = thisEquation.concat(v.getTag().toString());
-//                equation.setText(thisEquation);
-//            }
-//        }
+    @Override
+    public void onClick(View v) {
+        Log.d("view", "ok");
+       if(v==clear){
+           saveAnswer=text_equation.getText().toString();
+          text_equation.setText("");
+
+       }
+       else if(v==answer){
+           text_equation.setText(saveAnswer);
+
+       }
     }
 }
+
 
