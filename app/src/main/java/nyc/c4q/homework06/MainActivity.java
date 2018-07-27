@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private static final String TAG = "MyActivity";
+    private static final String TAG = "MyActivity"; //for debugging
     public int inv_counter = 1;
     private TextView text_equation;
     Switch simpleSwitch;
@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //creating a instance of every key in the calculator
         setContentView(R.layout.activity_main);
         simpleSwitch = (Switch) findViewById(R.id.simpleSwitch);
         text_equation = (TextView) findViewById(R.id.text_equation);
-        // rad_degree_togle = (ToggleButton) findViewById(R.id.rad_degree_togle);
         factorial = (Button) findViewById(R.id.factorial);
         open_parens = (Button) findViewById(R.id.open_parens);
         closed_parens = (Button) findViewById(R.id.closed_parens);
@@ -114,24 +114,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         decimal = (Button) findViewById(R.id.decimal);
         equals = (Button) findViewById(R.id.equals);
         add = (Button) findViewById(R.id.add);
-        //TODO: saved instance state for switching screen orientation layouts.
-        clear.setOnClickListener(this);
-        answer.setOnClickListener(this);
+
+        clear.setOnClickListener(this); //enabling the OnClickListener for clear screen
+
+
 
     }
 
 
     public void calculateEquation(View v) {
 
-        //TODO: create and use resource values for button tags and text
-        //TODO: create resource values for xml styles.
         //TODO: design the UI styles
-        // TODO: radians vs degrees toggle button.
+
 
         CalculatorEvaluation calculation = new CalculatorEvaluation();
         String thisEquation = text_equation.getText().toString();
         String expression;
-
+            //this will enable the inverse button
         if (v.getTag().toString().equals("inv")) {
             inv_counter = inv_counter + 1;
             if (inv_counter % 2 == 0) {
@@ -148,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 square.setVisibility(View.VISIBLE);
                 square_root.setVisibility(View.GONE);
                 random_number.setVisibility(View.VISIBLE);
-                answer.setVisibility(View.GONE);
+                exponent.setVisibility(View.GONE);
                 x_root_y.setVisibility(View.VISIBLE);
                 x_square_y.setVisibility(View.GONE);
 
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 square.setVisibility(View.GONE);
                 square_root.setVisibility(View.VISIBLE);
                 random_number.setVisibility(View.GONE);
-                answer.setVisibility(View.VISIBLE);
+                exponent.setVisibility(View.VISIBLE);
                 x_root_y.setVisibility(View.GONE);
                 x_square_y.setVisibility(View.VISIBLE);
 
@@ -176,20 +175,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
+
+            //this tag will calculate the answer of the eqn
         if (v.getTag().toString().equals("=")) {
-            if (v.getTag().toString().equals("ans")) {
 
-
-            }
 
             String newString = text_equation.getText().toString();
 
+            if(newString.equals("!") || newString.equals("%")) {
 
-            FactorialAndPercentage cal = new FactorialAndPercentage();
-            newString = cal.simplify(newString);
-            Log.d("ok", newString);
-            newString = cal.simplify(newString);
-            Log.d("final", newString);
+
+                FactorialAndPercentage cal = new FactorialAndPercentage();
+                newString = cal.simplify(newString);
+            }
+          //  Log.d("FactorialAndPercentage", newString);  //for testing purpose to see if the percentage and factorial has been evaluated
+
+            if(newString.equals("r")){  //if the random is present in the eqn
+                RandomNumber rand=new RandomNumber();
+             newString=   rand.randomNumber(newString);
+            }
+          //  Log.d("randomNumber", newString);  //for testing purpose to see if the random number has been evaluated
 
             calculation.setEquation(newString.toString());
             expression = calculation.getEquation();
@@ -197,36 +202,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             calculation.evaluateEquation(expression, text_equation);
             saveAnswer = text_equation.toString();
 
-            evaluated = true;
-        } else if (evaluated) {
-           // text_equation.setText(v.getTag().toString());
-
-            evaluated = false;
         }
-//        } else if (v.getTag().toString().equals("delete")) {
-//            text_equation.setText(thisEquation.substring(thisEquation.length()));
-//
-//        }
+        //this will enable all the key pressed to be displayed in the screen
         else if (!v.getTag().toString().equals("inv") && !v.getTag().toString().equals("delete")) {
             thisEquation = thisEquation.concat(v.getTag().toString());
             text_equation.setText(thisEquation);
         }
+        if(v.getTag().toString().equals("answer")){
+            text_equation.setText(saveAnswer);
+        }
+
 
     }
-
+    //this will clear the screen
     @Override
     public void onClick(View v) {
-        Log.d("view", "ok");
-       if(v==clear){
-           saveAnswer=text_equation.getText().toString();
-          text_equation.setText("");
+       // Log.d("Screen", text_equation.toString()); // for testing purpose
+        if (v == clear) {
+            saveAnswer = text_equation.getText().toString();
+            text_equation.setText("");
+            //   Log.d("clearScreen", text_equation.toString()); //foe testing purpose
 
-       }
-       else if(v==answer){
-           text_equation.setText(saveAnswer);
+        }
 
-       }
+
     }
+
 }
 
 
