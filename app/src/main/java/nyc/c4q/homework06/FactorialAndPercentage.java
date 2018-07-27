@@ -12,9 +12,9 @@ public class FactorialAndPercentage {
 
     public String simplify(String newString){
 
-   // String newstring = "(4!+6%+5!+2!-(25+8!-45%))";
-    //    System.out.println(newString);
-    ArrayList<String> operators = new ArrayList<>();
+   // this is a test example String newstring = "(4!+6%+5!+2!-(25+8!-45%))";
+
+    ArrayList<String> operators = new ArrayList<>(); //creating a arraylist for separating eqn
 
         operators.add("-");
         operators.add("(");
@@ -32,17 +32,15 @@ public class FactorialAndPercentage {
        // System.out.println(operators.toString());
     ArrayList<String> stringSplit = new ArrayList<String>();
 
-    String[] parts = newString.split(operators.toString());
+    String[] parts = newString.split(operators.toString());  //this will split the string to array,when it finds the operators
 
 
     List<Integer> factorialList = new ArrayList<Integer>();
     List<Integer> percentList=new ArrayList<Integer>();
 
-        for(int i = 0; i < newString.length(); i++) {
+        for(int i = 0; i < newString.length(); i++) {   //this will store the position of the factorial and  percentage number in eqn
 
-
-
-        if (newString.charAt(i) == '!') {
+            if (newString.charAt(i) == '!') {
 
             factorialList.add(i);
         }
@@ -55,62 +53,55 @@ public class FactorialAndPercentage {
     //   System.out.println("parts" + parts.length);
 
     StringBuilder finalString = new StringBuilder();
-        finalString.append(newString);
+        finalString.append(newString); //appending the eqn to finalstring
     ArrayList<Character> str= new ArrayList<>();
 
-        for(int z=0;z<finalString.length();z++) {
+        for(int z=0;z<finalString.length();z++) {  //initializing the eqn to char array
         str.add(finalString.charAt(z));
-        //     System.out.print(str.get(z));
+
     }
 
 
-    //  System.out.println(factorialList);
-    //  System.out.println(perc);
+
     int j = 0,k=0;
     String newStringLength ="";
         for (int i = 0; i < parts.length; i++) {
         int pos = 0;
         String ok = "";
-        stringSplit.add(parts[i]);
-        if (parts[i].contains("!")) {
-            //   System.out.println(parts[i]);
-            pos = factorialList.get(0);
-            //  System.out.println("pos" + pos);
-            int a = parts[i].length() - 1;
-            String[] b = parts[i].split("!");
-            int result = Integer.parseInt(b[0]);
+        stringSplit.add(parts[i]);  //this will catch all
+        if (parts[i].contains("!")) { //if the parts array contains "!" will execute the statement
 
-            //  System.out.println(" fact!" + result + "len" + a);
-            int factoria = factorial(result);
-            //  System.out.println("this is fact!" + factoria);
-            ok = Integer.toString(factoria);
-            for (int l = 0; l < parts[i].length(); l++) {
+            pos = factorialList.get(0); //this wil get the factorial position
+            int a = parts[i].length() - 1; //this will store how many digit factorial is the number
+            String[] b = parts[i].split("!"); //this will store the number only in string format
+            int result = Integer.parseInt(b[0]); //convert to number
+
+
+            int factoria = factorial(result);  //this will call the factorial function for evaluation
+
+            ok = Integer.toString(factoria); //this will convert the factorial value to string
+            for (int l = 0; l < parts[i].length(); l++) { //this will remove the factorial sign and the number ie (3!+47)=>(+47) 0='(',1=3,2=!,'3'=+,4='6',5='7',6=')'=>0='(',1='+',2='6',3='7',4=')'
                 str.remove(pos - l);
             }
-            for (int l = 0; l < ok.length(); l++) {
+            for (int l = 0; l < ok.length(); l++) { //this will add the new evaluated value (+47)=>(6+47)
 
                 char z = ok.charAt(l);
                 str.add(pos + l - (a), z);
 
-                //     System.out.println(str);
+
             }
 
-            //  System.out.println("after" + str);
+
 
             parts = newString.split(operators.toString());
-            factorialList.clear();
-            //  System.out.println("factorialList is" + factorialList);
+            factorialList.clear(); //this needs to be cleared as every time we need to evaluated new factorial
             for (int l = 0; l < str.size(); l++) {
-
 
                 if (str.get(l) == '!') {
                     factorialList.add(l);
-
-                    break;
+                    break; //this will let one factorial to be evaluated at a time
                 }
             }
-
-
             j++;
         }
     }
@@ -138,17 +129,14 @@ public class FactorialAndPercentage {
 
                 char z = ok.charAt(l);
                 str.add(pos + l - (a), z);
-
-                //   System.out.println(str);
             }
 
-            //   System.out.println("after" + str);
+
 
             parts = newString.split(operators.toString());
             percentList.clear();
-            //  System.out.println("percent is" + percentList);
-            for (int l = 0; l < str.size(); l++) {
 
+            for (int l = 0; l < str.size(); l++) {
 
                 if (str.get(l) == '%') {
                     percentList.add(l);
@@ -159,11 +147,10 @@ public class FactorialAndPercentage {
 
         }
 
-        //  System.out.println(parts[i]);
     }
     String finalS= new String(String.valueOf(str));
 
-    finalS = finalS.replace("]", "");
+    finalS = finalS.replace("]", ""); //this will convert char aray yo string
     finalS=finalS.replace("[","");
     finalS=finalS.replace(",","");
     finalS=finalS.replace(" ","");
