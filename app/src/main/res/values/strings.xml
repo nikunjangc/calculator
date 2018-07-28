@@ -1,4 +1,5 @@
 <resources>
+    <string name="error"><![CDATA[<b><font color=#FF0000>Error</font></b>]]></string>
     <string name="app_name">Calculator</string>
     <string name="text_equation">0</string>
     <string name="rad_degree_togle">RAD</string>
@@ -36,9 +37,9 @@
     <string name="subtract">-</string>
     <string name="answer">Ans</string>
     <string name="random_number">Rnd</string>
-    <string name="exponent">Exp</string>
+    <string name="prime">Prime</string>
     <string name="x_square_y">x^y</string>
-    <string name="x_root_y">x√y</string>
+    <string name="fibonnaci">Fibo</string>
     <string name="Zero">0</string>
     <string name="decimal">.</string>
     <string name="equals">=</string>
