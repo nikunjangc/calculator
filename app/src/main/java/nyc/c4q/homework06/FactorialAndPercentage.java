@@ -30,7 +30,7 @@ public class FactorialAndPercentage {
 //        operators.add("Exp");
 
        // System.out.println(operators.toString());
-    ArrayList<String> stringSplit = new ArrayList<String>();
+  //  ArrayList<String> stringSplit = new ArrayList<String>();
 
     String[] parts = newString.split(operators.toString());  //this will split the string to array,when it finds the operators
 
@@ -68,12 +68,16 @@ public class FactorialAndPercentage {
         for (int i = 0; i < parts.length; i++) {
         int pos = 0;
         String ok = "";
-        stringSplit.add(parts[i]);  //this will catch all
+       // stringSplit.add(parts[i]);  //this will catch all
         if (parts[i].contains("!")) { //if the parts array contains "!" will execute the statement
 
             pos = factorialList.get(0); //this wil get the factorial position
             int a = parts[i].length() - 1; //this will store how many digit factorial is the number
             String[] b = parts[i].split("!"); //this will store the number only in string format
+          if(b[0].contains(".")){
+              return newString ;
+
+          }
             int result = Integer.parseInt(b[0]); //convert to number
 
 
@@ -109,14 +113,14 @@ public class FactorialAndPercentage {
         for (int i = 0; i < parts.length; i++) {
         int pos = 0;
         String ok = "";
-        stringSplit.add(parts[i]);
+     //   stringSplit.add(parts[i]);
         if (parts[i].contains("%")) {
             //   System.out.println(parts[i]);
             pos = percentList.get(0);
             //  System.out.println("pos" + pos);
             int a = parts[i].length() - 1;
             String[] b = parts[i].split("%");
-            Double result = Double.valueOf(Integer.parseInt(b[0]));
+            Double result = Double.valueOf(b[0]);
 
             //  System.out.println(" percentList!" + result + "len" + a);
             double percentage = percentage(result);

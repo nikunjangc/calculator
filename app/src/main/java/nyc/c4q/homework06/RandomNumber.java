@@ -102,6 +102,7 @@ public class RandomNumber {
                      }
               }
 
+
               String finalS= new String(String.valueOf(str));  //taking back the char array to regular string
               finalS = finalS.replace("]", "");
               finalS=finalS.replace("[","");

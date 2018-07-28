@@ -2,6 +2,7 @@ package nyc.c4q.homework06;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -55,15 +56,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button subtract;
     private Button answer;
     private Button random_number;
-    private Button exponent;
+    private Button prime;
     private Button x_square_y;
-    private Button x_root_y;
+    private Button fibonnaci;
     private Button zero;
     private Button decimal;
     private Button equals;
     private Button add;
     boolean evaluated = false;
     String saveAnswer = null;
+    String newString=null;
 
 
     @Override
@@ -107,8 +109,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         subtract = (Button) findViewById(R.id.subtract);
         answer = (Button) findViewById(R.id.answer);
         random_number = (Button) findViewById(R.id.random_number);
-        exponent = (Button) findViewById(R.id.exponent);
-        x_root_y = (Button) findViewById(R.id.x_root_y);
+        prime = (Button) findViewById(R.id.prime);
+        fibonnaci = (Button) findViewById(R.id.fibonnaci);
         x_square_y = (Button) findViewById(R.id.x_square_y);
         zero = (Button) findViewById(R.id.zero);
         decimal = (Button) findViewById(R.id.decimal);
@@ -147,8 +149,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 square.setVisibility(View.VISIBLE);
                 square_root.setVisibility(View.GONE);
                 random_number.setVisibility(View.VISIBLE);
-                exponent.setVisibility(View.GONE);
-                x_root_y.setVisibility(View.VISIBLE);
+                prime.setVisibility(View.GONE);
+                fibonnaci.setVisibility(View.VISIBLE);
                 x_square_y.setVisibility(View.GONE);
 
             } else if (inv_counter % 2 != 0) {
@@ -166,8 +168,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 square.setVisibility(View.GONE);
                 square_root.setVisibility(View.VISIBLE);
                 random_number.setVisibility(View.GONE);
-                exponent.setVisibility(View.VISIBLE);
-                x_root_y.setVisibility(View.GONE);
+                prime.setVisibility(View.VISIBLE);
+                fibonnaci.setVisibility(View.GONE);
                 x_square_y.setVisibility(View.VISIBLE);
 
             }
@@ -180,27 +182,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v.getTag().toString().equals("=")) {
 
 
-            String newString = text_equation.getText().toString();
+            newString = text_equation.getText().toString();
 
-            if(newString.equals("!") || newString.equals("%")) {
+
+            if(newString.contains("!") || newString.contains("%")) {
 
 
                 FactorialAndPercentage cal = new FactorialAndPercentage();
                 newString = cal.simplify(newString);
+
+                if(newString.contains("!")){
+                    String error = getResources().getString(R.string.error);
+                    text_equation.setText(Html.fromHtml(error));
+                }
             }
           //  Log.d("FactorialAndPercentage", newString);  //for testing purpose to see if the percentage and factorial has been evaluated
 
-            if(newString.equals("r")){  //if the random is present in the eqn
+            if(newString.contains("r")){  //if the random is present in the eqn
                 RandomNumber rand=new RandomNumber();
              newString=   rand.randomNumber(newString);
             }
           //  Log.d("randomNumber", newString);  //for testing purpose to see if the random number has been evaluated
 
-            calculation.setEquation(newString.toString());
+            calculation.setEquation(newString);
             expression = calculation.getEquation();
 
             calculation.evaluateEquation(expression, text_equation);
-            saveAnswer = text_equation.toString();
+            saveAnswer = text_equation.getText().toString();
 
         }
         //this will enable all the key pressed to be displayed in the screen
@@ -209,8 +217,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             text_equation.setText(thisEquation);
         }
         if(v.getTag().toString().equals("answer")){
+            if(saveAnswer.length()==0){
+                text_equation.setText("");
+            }
             text_equation.setText(saveAnswer);
         }
+        if(v.getTag().toString().equals("f")){
+            Fibonnaci newFibonnaci= new Fibonnaci();
+            newString= newFibonnaci.fibo(text_equation.getText().toString());
+
+            text_equation.setText(newString);
+        }
+        if(v.getTag().toString().equals("p")){
+
+            Prime newPrime= new Prime();
+            newString=newPrime.primeNumber(text_equation.getText().toString());
+
+            text_equation.setText(newString);
+
+        }
+
 
 
     }
@@ -222,6 +248,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             saveAnswer = text_equation.getText().toString();
             text_equation.setText("");
             //   Log.d("clearScreen", text_equation.toString()); //foe testing purpose
+
 
         }
 

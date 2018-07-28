@@ -160,12 +160,12 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
-        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/color-v11_abc_background_cache_hint_selector_material_dark.xml.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable_equals.xml.flat",
@@ -230,6 +230,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xxxhdpi-v4/abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
@@ -300,6 +304,10 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.png"
     },
     {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-mdpi-v4/abc_popup_background_mtrl_mult.9.png"
     },
@@ -342,6 +350,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable_abc_seekbar_thumb_material.xml.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/anim_tooltip_exit.xml.flat",
@@ -392,12 +404,12 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable/abc_text_cursor_material.xml"
     },
     {
-        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-ldrtl-xxxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -420,16 +432,16 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
-        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_text_select_handle_left_mtrl_light.png.flat",
+        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_list_longpressed_holo.9.png.flat",
@@ -558,6 +570,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable_button_number.xml.flat",
         "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/drawable/button_number.xml"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -696,12 +712,12 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/56731bb78c01433ccc432038574e71ca/res/drawable/notification_icon_background.xml"
     },
     {
-        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
-        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/color-v23_abc_tint_btn_checkable.xml.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
+        "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-mdpi-v4/abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_light.xml.flat",
@@ -722,6 +738,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -796,6 +816,10 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable/abc_switch_thumb_material.xml"
     },
     {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
+    },
+    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable_abc_ic_search_api_material.xml.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable/abc_ic_search_api_material.xml"
     },
@@ -806,6 +830,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-ldpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_half_black_36dp.png.flat",
@@ -1080,12 +1108,20 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/layout/abc_list_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/color_abc_secondary_text_material_dark.xml.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/56731bb78c01433ccc432038574e71ca/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -1126,6 +1162,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-mdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable_abc_ic_go_search_api_material.xml.flat",
@@ -1186,6 +1226,14 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xxhdpi-v4/abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1260,6 +1308,10 @@
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.png"
     },
     {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/drawable-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -1290,6 +1342,10 @@
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/layout_select_dialog_singlechoice_material.xml.flat",
         "source": "/Users/nikunjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/b7d855b19503f3dcb97e839c865d959f/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/Users/nikunjan/Downloads/ScientificCalculator-master/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
