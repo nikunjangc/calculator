@@ -1,0 +1,20 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Generated platform folders are recreated with `flutter create .`
+# (kept out of source until the project is promoted to its own repo)
+
+# Secrets — never commit API keys
+*.env
